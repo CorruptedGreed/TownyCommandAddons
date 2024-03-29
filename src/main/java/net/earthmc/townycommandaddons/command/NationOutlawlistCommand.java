@@ -63,13 +63,7 @@ public class NationOutlawlistCommand implements TabExecutor {
             nationNames.add(nation.getName());
         }
 
-        if (args.length == 1) {
-            if (args[0].isEmpty()) return nationNames;
-
-            return nationNames.stream()
-                    .filter(name -> name.startsWith(args[0].toLowerCase()))
-                    .collect(Collectors.toList());
-        }
+        if (args.length == 1) return nationNames;
 
         return null;
     }
